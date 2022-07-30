@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+
+.contacts {
+    width: 60%;
+    height: fit-content;
+    background-color: grey;
+    flex-direction: column;
+    padding: 15px 10px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+
+.contact-search-main {
+    width: 95%;
+    line-height: 1.5em;
+}
+
+.contact-search {
+    background-color: #223636;
+    flex-direction: column;
+    padding: 15px 3px 3px 3px;
+    align-items: center;
+    color: #cccaca;
+}
+
+.contact-gender-search {
+    height: fit-content;
+    padding: 3px;
+}
+
+.gender-checkbox {
+    margin:5px 30px;
+
+}
+
+.gender-checkbox input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 15px;
+}
+.contacts-list{
+    width: 100%;
+    padding: 0 9px;
+    margin-top: 10px;
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: hsl(0 0% 50%);
+    scrollbar-width: thin;
+}
+.contacts-list ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+}
+
+
+.contacts-list li {
+    margin-bottom: 3px;
+    width: 100%;
+    /*background-color: violet;*/
+}
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #223636;
+    border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #223636;
+}

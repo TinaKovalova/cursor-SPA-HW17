@@ -1,0 +1,28 @@
+.about-block-card {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+}
+.card-text {
+    width: 45%;
+    height: 300px;
+    padding: 30px 12% 35px 5%;
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    box-shadow: 0px 1rem 1.5rem rgba(0,0,0, 0.5);
+
+}
+.about-block-card p {
+    color: #333333;
+}
+.about-block-card img {
+    width: 65%;
+    z-index: 10;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    border-radius: 2rem;
+    box-shadow: 0px 1rem 1.5rem rgba(0,0,0, 0.5);
+}

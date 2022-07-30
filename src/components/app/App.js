@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {Header,AboutPage, ContactsPage, GalleryPage, PostsPage } from '../src/components';
+import {Header,AboutPage, ContactsPage, GalleryPage, PostsPage } from '../index';
 
 function App() {
     return (

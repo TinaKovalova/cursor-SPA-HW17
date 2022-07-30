@@ -1,9 +1,10 @@
 import {Component} from "react";
 import {NavLink} from "react-router-dom";
 import './Header.css';
-export default class Header extends Component{
+
+export default class Header extends Component {
     render() {
-        return(
+        return (
             <div className='navigation'>
                 <ul>
                     <li><NavLink to='/'>Home</NavLink></li>
@@ -12,7 +13,6 @@ export default class Header extends Component{
                     <li><NavLink to='/contacts'>Contacts</NavLink></li>
                 </ul>
             </div>
-
-        )
+        );
     }
 }

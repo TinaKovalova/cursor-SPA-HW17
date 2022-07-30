@@ -1,16 +1,16 @@
 import {Component} from "react";
 import './Post.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMessage, faHeart, faRetweet, faShare, faB,faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import {faMessage, faHeart, faRetweet, faShare, faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 
 
-export default class Post extends Component{
+export default class Post extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-       const { content, image, date, author: {name, photo, nickname}}=this.props;
+        const {content, image, date, author: {name, photo, nickname}} = this.props;
         return (
             <div className='post d-flex'>
                 <img src={photo} className='photo' alt='avatar'/>
@@ -41,6 +41,6 @@ export default class Post extends Component{
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }

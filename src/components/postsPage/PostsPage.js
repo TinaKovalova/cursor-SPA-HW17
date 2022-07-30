@@ -2,9 +2,10 @@ import {Component} from "react";
 import Post from "../post/Post";
 import './PostsPage.css'
 import {ANAKIN_IMAGE, RAY_IMAGE} from "../../constants";
-export default class PostsPage extends Component{
+
+export default class PostsPage extends Component {
     render() {
-        return(
+        return (
             <div className='posts-container'>
                 <Post author={{
                     name: "Anakin skywalker",
@@ -25,6 +26,6 @@ export default class PostsPage extends Component{
 
 
             </div>
-        )
+        );
     }
 }

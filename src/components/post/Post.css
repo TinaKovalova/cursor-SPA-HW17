@@ -12,8 +12,6 @@
     background-color: #223636;
     margin: 15px auto;
     border-radius: 15px;
-
-
 }
 
 .photo {
@@ -55,6 +53,7 @@
 .post-menu div {
     margin: 10px 20px;
 }
-.post-menu label{
+
+.post-menu label {
     margin-left: 5px;
 }

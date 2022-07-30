@@ -1,6 +1,6 @@
 import {Component} from "react";
 import Contact from "../contact/Contact";
-import './ContactsPage.css'
+import './ContactsPage.css';
 import {CONTACTS} from '../../constants';
 import {v4 as uuidv4} from 'uuid';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -22,7 +22,14 @@ export default class ContactsPage extends Component {
     }
 
     componentDidMount() {
-        this.setState({contacts: CONTACTS})
+        this.setState({contacts: CONTACTS});
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (JSON.stringify(prevState) !== JSON.stringify(this.state)) {
+            const sorted = this.filterContacts(this.state.genderSearchParams, this.state.searchParam);
+            this.setState({contacts: sorted});
+        }
     }
 
     filterContacts = (genderParams, searchTextParam) => {
@@ -36,13 +43,6 @@ export default class ContactsPage extends Component {
                      phone
                  }) => `${firstName} ${lastName} ${phone}`.toLowerCase().includes(searchTextParam)) : filteredByGender;
         return searchResult;
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (JSON.stringify(prevState) !== JSON.stringify(this.state)) {
-            const sorted = this.filterContacts(this.state.genderSearchParams, this.state.searchParam);
-            this.setState({contacts: sorted})
-        }
     }
 
     handleSearch = (event) => {

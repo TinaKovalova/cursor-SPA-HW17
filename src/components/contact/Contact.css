@@ -10,9 +10,9 @@
 }
 
 .contact-photo {
-    width: 6%;
+    width: 8%;
     background: url("../../assets/user.png") no-repeat;
-    background-size: cover;
+    background-size:contain;
     border-radius: 50%;
 }
 

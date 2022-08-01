@@ -1,12 +1,12 @@
 import {Component} from "react";
 import './GalleryPage.css';
 import Service from "../../service";
-
+import CardImage from '../cardImage/CardImage';
 
 export default class GalleryPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {data: null};
+        this.state = {data: null, src: ''};
         this.service = new Service();
     }
 
@@ -19,13 +19,14 @@ export default class GalleryPage extends Component {
 
     render() {
         const {data} = this.state;
+
         return (
             <div className='gallery-block'>
                 {
                     data ? data.map(({id, name, image}) => {
                             return (
                                 <div key={id} className="card">
-                                    <img className='card-img' src={image} alt="Avatar"/>
+                                    <CardImage className='card-img' src={image}/>
                                     <div className="container">
                                         <h4><b>{name}</b></h4>
                                     </div>
